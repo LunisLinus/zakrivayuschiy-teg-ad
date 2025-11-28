@@ -1,18 +1,386 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
+  <link rel="icon" href="./images/favicon.png" type="image/png" />
+  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+
+<body class="page">
+  <!-- SVG Symbol Definitions -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position: absolute;">
+    <defs>
+      <symbol id="floppy-icon" viewBox="0 0 39 39" fill="none">
+        <path d="M0 0h39v39H0z" />
+        <path fill="currentColor"
+          d="M12 3h3v3h-3V3ZM15 3h3v3h-3V3ZM18 3h3v3h-3V3ZM21 3h3v3h-3V3ZM12 27h3v3h-3v-3ZM15 27h3v3h-3v-3ZM18 27h3v3h-3v-3ZM12 30h3v3h-3v-3ZM15 30h3v3h-3v-3ZM18 30h3v3h-3v-3ZM36 12h3v3h-3v-3ZM36 15h3v3h-3v-3ZM36 18h3v3h-3v-3ZM36 21h3v3h-3v-3ZM3 3h3v3H3V3ZM3 6h3v3H3V6ZM3 9h3v3H3V9ZM3 12h3v3H3v-3ZM3 15h3v3H3v-3ZM3 18h3v3H3v-3ZM3 21h3v3H3v-3ZM3 24h3v3H3v-3ZM3 27h3v3H3v-3ZM3 30h3v3H3v-3ZM3 33h3v3H3v-3ZM21 33h3v3h-3v-3ZM24 33h3v3h-3v-3ZM27 33h3v3h-3v-3ZM30 33h3v3h-3v-3ZM33 33h3v3h-3v-3ZM36 33h3v3h-3v-3ZM36 6h3v3h-3V6ZM36 9h3v3h-3V9ZM6 9h21v21H6V9Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="header">
+    <div class="header__logo">&lt;/HTML&gt;</div>
+    <h1 class="header__title">закрывающий тег</h1>
+  </header>
+
+  <main class="main">
+    <!-- Card 1 -->
+    <article class="card">
+      <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к учёбе</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Волнение</span>
+        <img src="./images/image-desktop.png" alt="Начало пути" class="card__image filter-brightness">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Это было самое начало пути. Я только-только определился с направлением и был полон энтузиазма.
+          Фритрек показал, что программирование — это интересно, хотя местами и пугающе сложно.
+        </p>
+        <p class="card__text">
+          Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <h2 class="card__title">1 спринт: А если не получится?</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Сомнения</span>
+        <img src="./images/image-desktop.png" alt="Первые шаги" class="card__image filter-contrast">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Первый спринт был самым тяжёлым. Казалось, что ничего не понятно и никогда не станет понятно.
+          Синтаксис путался, логика ускользала.
+        </p>
+        <p class="card__text">
+          Но постепенно начало что-то проясняться. Каждая решённая задача давала уверенность.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <h2 class="card__title">1 спринт: Первые успехи</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Радость</span>
+        <img src="./images/image-desktop.png" alt="Первые успехи" class="card__image filter-saturate">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          А потом что-то щёлкнуло! Я вдруг понял, как работают циклы, как использовать переменные.
+          Код перестал быть набором символов и стал инструментом.
+        </p>
+        <p class="card__text">
+          Это была настоящая радость открытия. Впервые я почувствовал себя программистом.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card">
+      <h2 class="card__title">2 спринт: Погружение</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Интерес</span>
+        <img src="./images/image-desktop.png" alt="Погружение в код" class="card__image filter-hue">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Второй спринт был интереснее. Теперь я уже не просто выполнял задания, а начал понимать,
+          зачем каждая конструкция нужна.
+        </p>
+        <p class="card__text">
+          Код стал похож на конструктор — ты просто собираешь нужные детали в правильном порядке.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="card">
+      <h2 class="card__title">3 спринт: Вёрстка</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Творчество</span>
+        <img src="./images/image-desktop.png" alt="Знакомство с вёрсткой" class="card__image filter-blur">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          HTML и CSS открыли совершенно новый мир. Теперь я мог не только писать логику, но и создавать
+          визуальные вещи, которые можно показать друзьям.
+        </p>
+        <p class="card__text">
+          Это был момент, когда программирование стало по-настоящему творческим процессом.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="card">
+      <h2 class="card__title">4 спринт: Адаптивность</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Внимание</span>
+        <img src="./images/image-desktop.png" alt="Адаптивная вёрстка" class="card__image filter-sepia">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Адаптивная вёрстка казалась сложной магией. Как сделать так, чтобы сайт хорошо выглядел
+          и на телефоне, и на огромном мониторе?
+        </p>
+        <p class="card__text">
+          Но оказалось, что всё сводится к пониманию нескольких простых принципов и внимательности к деталям.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="card">
+      <h2 class="card__title">5 спринт: Анимации</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Восторг</span>
+        <img src="./images/image-desktop.png" alt="Мир анимаций" class="card__image filter-invert">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Анимации вдохнули жизнь в статичные макеты. Кнопки стали отзываться на действия пользователя,
+          элементы плавно появлялись и исчезали.
+        </p>
+        <p class="card__text">
+          Каждая успешная анимация вызывала восторг, как будто я создал маленькое чудо своими руками.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Card 8 -->
+    <article class="card">
+      <h2 class="card__title">Закрывающий тег</h2>
+      <div class="card__image-wrapper">
+        <span class="card__label">Уверенность</span>
+        <img src="./images/image-desktop.png" alt="Финал пути" class="card__image filter-multi">
+      </div>
+      <div class="card__content">
+        <p class="card__text">
+          Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много
+          материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается — это целый мир.
+        </p>
+        <p class="card__text">
+          И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай,
+          когда важен сам процесс познания. Ведь часто путь — и есть результат.
+        </p>
+      </div>
+      <div class="card__buttons">
+        <button class="card__icon-button" type="button" aria-label="Лайк">
+          <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36"
+            fill="none">
+            <g class="heart">
+              <path class="core" fill="none"
+                d="M12 6H9v3h3V6ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM15 6h-3v3h3V6ZM27 6h3v3h-3V6ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6Z" />
+              <path class="main-body" fill="none"
+                d="M12 9H9v3h3V9ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 15h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 9h3v3h-3V9ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM27 15h3v3h-3v-3ZM27 18h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 15h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 24h3v3h-3v-3Z" />
+              <path class="contour" fill="var(--contour-color)"
+                d="M18 15h-3v3h3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 9h-3v3h3V9ZM18 9h-3v3h3V9ZM18 12h-3v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM18 27h-3v3h3v-3ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 12h3v3h-3v-3ZM24 9h3v3h-3V9ZM27 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM30 12h3v3h-3v-3ZM30 9h3v3h-3V9ZM12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM15 15h-3v3h3v-3ZM12 15H9v3h3v-3ZM12 18H9v3h3v-3ZM9 18H6v3h3v-3ZM9 15H6v3h3v-3ZM9 12H6v3h3v-3ZM9 9H6v3h3V9ZM6 9H3v3h3V9ZM6 12H3v3h3v-3ZM6 15H3v3h3v-3ZM18 18h-3v3h3v-3ZM21 21h-3v3h3v-3ZM24 21h3v3h-3v-3ZM27 18h3v3h-3v-3ZM30 15h3v3h-3v-3ZM33 15h3v3h-3v-3ZM33 12h3v3h-3v-3ZM33 9h3v3h-3V9Z" />
+            </g>
+            <g class="sparks">
+              <path fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3h-3v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z" />
+            </g>
+          </svg>
+        </button>
+        <button class="card__like-button" type="button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- Save Button -->
+    <button class="save-button" type="button" onclick="document.querySelector('#save-dialog').showModal()">
+      <svg class="save-button__icon" viewBox="0 0 39 39">
+        <use href="#floppy-icon"></use>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+  </main>
+
+  <!-- Modal Dialog -->
+  <dialog class="dialog" id="save-dialog">
+    <div class="dialog__content">
+      <svg class="dialog__icon" viewBox="0 0 39 39">
+        <use href="#floppy-icon"></use>
+      </svg>
+      <p class="dialog__text">
+        Вставьте дискету, чтобы продолжить
+      </p>
+    </div>
+    <form method="dialog">
+      <button class="dialog__button" type="submit">
+        <span class="button__text">ОК</span>
+      </button>
+    </form>
+  </dialog>
+
+  <script src="./scripts/like.js"></script>
+</body>
+
 </html>
