@@ -83,32 +83,28 @@
     filter: sepia(0.8) hue-rotate(-10deg) contrast(0.8) brightness(0.9);
 }
 
-.image-uncertainty {
-    filter: blur(2px) hue-rotate(200deg) saturate(0.8) brightness(1.1);
+.image-neon {
+    filter: saturate(2.5) contrast(1.4) brightness(1.5);
 }
 
-.image-anxiety {
-    filter: invert(0.15) contrast(1.8) brightness(0.7) saturate(1.4);
+.image-pixel-dusk {
+    filter: hue-rotate(30deg) saturate(1.2) brightness(0.8) contrast(1.08)
 }
 
-.image-perfection {
-    filter: contrast(1.6) saturate(0.9) brightness(1.05) hue-rotate(420deg);
+.image-green-invert {
+    filter: invert(1) hue-rotate(10deg) saturate(1.5) brightness(0.74) contrast(0.77);
 }
 
-.image-support {
-    filter: brightness(1.1) sepia(0.3) hue-rotate(350deg) contrast(1.05);
+.image-sepia-brown {
+    filter: saturate(0) contrast(1.05) brightness(1.18) sepia(1);
 }
 
-.image-breakthrough {
-    filter: hue-rotate(120deg) saturate(1.6) contrast(1.4) brightness(0.95);
+.image-blur {
+    filter: blur(8px) saturate(1.5) brightness(1.2) contrast(1.05);
 }
 
-.image-exhaustion {
-    filter: grayscale(0.7) brightness(0.8) contrast(1.2) opacity(0.9);
-}
-
-.image-triumph {
-    filter: contrast(1.7) saturate(1.5) brightness(1.1) hue-rotate(300deg);
+.image-green-red {
+    filter: hue-rotate(120deg) saturate(1.4) brightness(0.9) contrast(0.6) blur(2px);
 }
 
 .card__buttons {
