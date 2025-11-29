@@ -1,58 +1,53 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
 :root {
-    /* Fonts */
+    /* === Мобильные значения по умолчанию === */
     --main-font: 'Inter Variable', sans-serif;
     --accent-font: 'Press Start 2P', fantasy;
 
-    /* Font weights for variable font */
     --main-weight: 400;
     --title-weight: 700;
 
-    /* Colors */
     --bg-color: #fff;
     --text-color: #000;
     --accent-color: #000;
     --border-color: #000;
 
-    /* Background gradient colors */
     --gradient-start: #e7e7e7;
     --gradient-end: #1a1a1a;
     --gradient-pattern: #d3d3d3;
 
-    /* Animation colors */
     --contour-color: #000;
     --animation-fill-color: #ff0000;
 
-    /* Label text stroke */
     --label-stroke-color: #fff;
 
-    /* Button colors */
     --button-bg: #fff;
     --button-text: #fff;
     --button-hover-bg: #000;
 
-    /* Sizing - responsive with clamp */
-    --page-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-    --header-padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-    --card-spacing: 50px;
-    --section-spacing: 100px;
+    /* Мобильные размеры */
+    --page-width: 100%;
+    --header-padding-block: 7.5rem;
+    --card-spacing: 3rem;
+    --section-spacing: 3rem;
 
-    /* Font sizes */
-    --logo-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    /* Мобильные шрифты */
+    --logo-size: 49px;
+    --title-size: 14px;
     --card-title-size: 18px;
     --label-size: 14px;
 
-    /* Borders */
     --border-width: 2px;
 }
 
-@media (width <=375px) {
+/* === Десктоп / планшеты шире 375px === */
+@media (min-width: 769px) {
     :root {
-        --page-width: 100%;
-        --header-padding-block: 7.5rem;
-        --card-spacing: 3rem;
-        --section-spacing: 3rem;
+        --page-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+        --header-padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+        --card-spacing: 50px;
+        --section-spacing: 100px;
+
+        --logo-size: 65px;
+        --title-size: 23px;
     }
 }

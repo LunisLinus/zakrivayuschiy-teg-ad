@@ -1,16 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
-/* ===== Base Styles ===== */
+/* ===== Base Styles (mobile first) ===== */
 
 .page {
     min-inline-size: 320px;
@@ -20,9 +8,9 @@
     color: var(--text-color);
     background-color: var(--bg-color);
     background-image:
-        repeating-linear-gradient(90deg, var(--gradient-pattern) 0, var(--gradient-pattern) 2px, transparent 2px, transparent 4px),
-        repeating-linear-gradient(180deg, var(--gradient-pattern) 0, var(--gradient-pattern) 2px, transparent 2px, transparent 4px),
-        linear-gradient(180deg, var(--gradient-start) 0.01%, var(--gradient-end) 100%);
+            repeating-linear-gradient(90deg, var(--gradient-pattern) 0, var(--gradient-pattern) 2px, transparent 2px, transparent 4px),
+            repeating-linear-gradient(180deg, var(--gradient-pattern) 0, var(--gradient-pattern) 2px, transparent 2px, transparent 4px),
+            linear-gradient(180deg, var(--gradient-start) 0.01%, var(--gradient-end) 100%);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -68,10 +56,11 @@
     object-position: center;
 }
 
+/* === MOBILE базовое положение плашки === */
 .card__label {
     position: absolute;
     top: 25px;
-    right: 25px;
+    right: 11px; /* ближе к краю на мобильном */
     font-family: var(--accent-font);
     font-size: var(--label-size);
     text-transform: uppercase;
@@ -91,10 +80,10 @@
 @supports not ((-webkit-text-stroke: 1px var(--label-stroke-color)) or (text-stroke: 1px var(--label-stroke-color))) {
     .card__label {
         text-shadow:
-            -1px -1px 0 var(--label-stroke-color),
-            1px -1px 0 var(--label-stroke-color),
-            -1px 1px 0 var(--label-stroke-color),
-            1px 1px 0 var(--label-stroke-color);
+                -1px -1px 0 var(--label-stroke-color),
+                1px -1px 0 var(--label-stroke-color),
+                -1px 1px 0 var(--label-stroke-color),
+                1px 1px 0 var(--label-stroke-color);
     }
 }
 
@@ -145,6 +134,7 @@ button {
     border-color: var(--accent-color);
 }
 
+/* === MOBILE размер сердца (крупнее) === */
 .like-icon {
     inline-size: 39px;
     block-size: 36px;
@@ -171,8 +161,10 @@ button {
     transition: box-shadow 0.3s ease;
 }
 
+/* === MOBILE: кнопка сохранения — в колонку, большая иконка === */
 .save-button {
     display: flex;
+    flex-direction: column;     /* mobile-first */
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -198,8 +190,8 @@ button {
 }
 
 .save-button__icon {
-    inline-size: 21px;
-    block-size: 21px;
+    inline-size: 28px;  /* мобильный размер */
+    block-size: 28px;
     color: var(--button-text);
     mix-blend-mode: difference;
     z-index: 1;
@@ -248,19 +240,33 @@ button {
     filter: brightness(1.1) contrast(110%) saturate(120%);
 }
 
-/* ===== Responsive ===== */
+/* центр для анимации сердца */
+.like-icon .heart {
+    transform-origin: center;
+    transform-box: fill-box;
+}
 
-@media (width <=375px) {
+/* ===== Desktop / tablets ≥ 769px ===== */
+
+@media (min-width: 769px) {
+    /* плашка дальше от края */
     .card__label {
-        right: 11px;
+        right: 25px;
     }
 
+    /* кнопка сохранения в строку, иконка меньше */
     .save-button {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .save-button__icon {
-        inline-size: 28px;
-        block-size: 28px;
+        inline-size: 21px;
+        block-size: 21px;
+    }
+
+    /* десктопный размер сердца: 27×24 */
+    .like-icon {
+        inline-size: 27px;
+        block-size: 24px;
     }
 }
