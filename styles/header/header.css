@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) clamp(0.875rem, -5.0626rem + 25.333vw, 7.531rem);
+
+    border: 2px solid var(--text-color, #000);
+    background-color: var(--bg-color, #fff);
+}
+
+.header__title {
+    text-transform: uppercase;
+
+    font-family: var(--accent-font, sans-serif);
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.header__subtitle {
+    margin-top: 20px;
+
+    text-transform: uppercase;
+
+    font-family: var(--accent-font, sans-serif);
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    font-weight: 400;
+    line-height: 1;
+}
