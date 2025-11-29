@@ -1,0 +1,71 @@
+/* ===== Dialog ===== */
+
+.dialog {
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bg-color);
+    padding: 30px;
+    max-inline-size: 357px;
+}
+
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dialog__content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dialog__icon {
+    inline-size: 39px;
+    block-size: 39px;
+    flex-shrink: 0;
+    color: var(--accent-color);
+    display: block;
+}
+
+.dialog__text {
+    font-family: var(--accent-font);
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.dialog__button {
+    inline-size: 100%;
+    padding: 9px 17px;
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--button-bg);
+    font-family: var(--accent-font);
+    font-size: 14px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.dialog__button:focus {
+    outline: none;
+}
+
+.dialog__button:focus-visible {
+    box-shadow: 2px 2px 0 0 var(--accent-color);
+    transition: box-shadow 0.3s ease;
+}
+
+/* ===== Responsive ===== */
+
+@media (width <=375px) {
+    .dialog {
+        max-inline-size: 341px;
+        padding: 30px 40px;
+    }
+}
